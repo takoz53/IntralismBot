@@ -40,7 +40,7 @@ Handling Rank Commands such as top10 goes to `ranking`
 
 This is to organize the code into collections of commands and listeners and handle things faster.
 
->There comes a time in the bot development when you want to extend the bot functionality at run-time and quickly unload and reload code (lso called hot-reloading). The command framework comes with this ability built-in, with a concept called extensions.
+>There comes a time in the bot development when you want to extend the bot functionality at run-time and quickly unload and reload code (also called hot-reloading). The command framework comes with this ability built-in, with a concept called extensions.
 
 [More Information over here](https://discordpy.readthedocs.io/en/latest/ext/commands/extensions.html#ext-commands-extensions)
 
