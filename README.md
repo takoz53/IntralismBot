@@ -46,4 +46,5 @@ This is to organize the code into collections of commands and listeners and hand
 
 ## Special thanks to
 @github/mishka for introducing me into Python and helping me at Data collection from Websites
+
 @github/incetarik for prettifying a lot of the Code.
