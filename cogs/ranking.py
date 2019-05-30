@@ -60,32 +60,32 @@ class RankingsCog(commands.Cog):
     
 
     @commands.command(name="top10", aliases=['top', 'topten', 'toplist', 'topplayers'])
-    @commands.cooldown(1, 60,  commands.BucketType.guild)
+    @commands.cooldown(1, 60, commands.BucketType.guild)
     async def printTop10(self, ctx: commands.Context):
         """ - Prints top10 Players of Intralism"""
         #Command will be blocked throughout Guild due to being a general command for everyone to see.
         #CreateTable called from Graph
-        async with ctx.typing():
-            players = [PlayerInfo().from_object(item) for item in scrapeTop()]
-            createGraph(players)
-            await ctx.send(file=discord.File("top.png"))
+        await ctx.trigger_typing()
+        players = [PlayerInfo().from_object(item) for item in scrapeTop()]
+        createGraph(players)
+        await ctx.send(file=discord.File("top.png"))
 
 
     @commands.command()
     @commands.cooldown(1, 30, commands.BucketType.user)
     async def rank(self, ctx: commands.Context, steamID=None):
         """- This command displays your rank or another Player its rank with the SteamID / URL as parameter"""
-        async with ctx.typing():
-            if steamID:
-                try:
-                    await self.displayRank(ctx, steamID)
-                except ValueError:
-                    await ctx.send("The given SteamID hasn't played Intralism yet or doesn't exist at all.")
-                return
+        await ctx.trigger_typing()
+        if steamID:
             try:
-                await self.displayAuthorRank(ctx)
+                await self.displayRank(ctx, steamID)
             except ValueError:
-                await ctx.send("There was an error fetching the given SteamID / URL.")
+                await ctx.send("The given SteamID hasn't played Intralism yet or doesn't exist at all.")
+            return
+        try:
+            await self.displayAuthorRank(ctx)
+        except ValueError:
+            await ctx.send("There was an error fetching the given SteamID / URL.")
     
     
 def setup(bot):
