@@ -53,16 +53,18 @@ def createGraph(players):
             ['<b>Score</b>'], ['<b>Avg Accuracy</b>'], ['<b>Avg Misses</b>']],
             line = dict(color='rgb(50, 50, 50)'),
             align = ['center'],
-            font = dict(color=['rgb(45, 45, 45)'] * 5, size=100),
+            font = dict(color=['rgb(45, 45, 45)'] * 5, size=100, family="Agency FB"),
             fill = dict(color='#ffda44')),
         cells = dict(values = values,
             line = dict(color='#506784'),
             align = ['left'],
-            font = dict(color=['rgb(40, 40, 40)'] * 5, size=96),
+            font = dict(color=['rgb(40, 40, 40)'] * 5, size=96, family="Agency FB"),
             height = 160,
             fill = dict(color=['rgb(228, 222, 249)'])))
 
     data = [trace]
     fig = go.Figure(data=data)
     pio.write_image(fig, 'top.png', width=5000, height=2500)
+    pio.orca.shutdown_server()
+    
     removeWhitespace('top.png')
