@@ -66,8 +66,8 @@ This is to organize the code into collections of commands and listeners and hand
 [More Information over here](https://discordpy.readthedocs.io/en/latest/ext/commands/extensions.html#ext-commands-extensions)
 
 ## Special thanks to
-@github/mishka for introducing me into Python and helping me at Data collection from Websites
+@mishka for introducing me into Python and helping me at Data collection from Websites
 
-@github/incetarik for prettifying a lot of the Code.
+@incetarik for prettifying a lot of the Code.
 
-@github/Mightylordx22 for giving me a head-start into the Project.
+@Mightylordx22 for giving me a head-start into the Project.
