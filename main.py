@@ -33,6 +33,12 @@ if __name__ == '__main__':
     createDatabase()
 
 @bot.event
+async def on_command_error(error, ctx):
+    if isinstance(error, commands.CommandOnCooldown):
+        await bot.send_message(ctx.message.channel, content='This command is on a %.2fs cooldown' % error.retry_after)
+        raise error
+
+@bot.event
 async def on_ready():
     """Command being called, when the Bot is ready."""
     print("Authentificated as:", bot.user.name,", ID:", bot.user.id)

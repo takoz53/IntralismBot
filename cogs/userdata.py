@@ -7,7 +7,7 @@ class UserDataCog(commands.Cog):
         self.bot = bot
 
     @commands.command(name="link")
-    @commands.cooldown(1, 5, commands.BucketType.user)
+    @commands.cooldown(1, 30, commands.BucketType.user)
     async def linkProfile(self, ctx : commands.Context, steamID = None):
         """- This command allows you to link yourself to a SteamID with the SteamID as Parameter"""
         #No parameter given

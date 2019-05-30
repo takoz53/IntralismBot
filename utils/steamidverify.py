@@ -2,7 +2,7 @@ from steam import SteamID
 import re
 def getSteamURL(input):
     """ Checks whether inputted value is a proper Steam URL or not"""
-    steamURL = re.search(r"^((?:https?:\/\/)?steamcommunity\.com\/(?:profiles|id)\/([a-zA-Z0-9]+)|([0-9]{17}))$", input)
+    steamURL = re.search(r"^((?:https?:\/\/)?steamcommunity\.com\/(?:profiles|id)\/([a-zA-Z0-9]+)|([0-9]{17}))(\/)?$", input)
     if steamURL:
         if steamURL.group(2):
             return dict({'is64': False, 'Value': steamURL.group(0)})
