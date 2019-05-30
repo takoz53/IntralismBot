@@ -43,7 +43,6 @@ def createConfig():
     if os.path.exists(configFile):
         return False
     data = {
-    'SteamAPI': '',
     'DiscordAPI': ''
     }
 
@@ -53,7 +52,6 @@ def createConfig():
 
 def readConfig():
     """Creates new Config if there was none before, else reads Data"""
-    global steamAPIKey
     global discordAPIKey
     newFile = createConfig()
     if newFile == True:
@@ -61,7 +59,6 @@ def readConfig():
     else:
         with open(configFile) as json_file:  
             data = json.load(json_file)
-            steamAPIKey = data["SteamAPI"]
             discordAPIKey = data["DiscordAPI"]
 readConfig()
 
