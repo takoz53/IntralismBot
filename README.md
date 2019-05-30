@@ -12,6 +12,27 @@
 > Links your Account to the specified Steam ID / URL.
 > If you mistakenly entered another URL / ID, you can redo this process.
 
+## How to run the Bot?
+### Prerequisites
+1. Create a Discord Bot Account
+2. Get its API Key for later
+### Installation
+1. Download the Github repository
+2. Download Python and install it. I'm using v3.7, so I recommend 3.7+ as well to have no compatibility issues
+3. Get following Dependencies (I used pip to get these):
+    - [pip install discord.py](https://pypi.org/project/discord.py/)
+    - [pip install plotly](https://pypi.org/project/plotly/)
+    - [pip install opencv-python](https://pypi.org/project/opencv-python/)
+    - [pip install numpy](https://pypi.org/project/numpy/)
+    - [pip install bs4](https://pypi.org/project/bs4/)
+    - [pip install steam](https://pypi.org/project/steam/)
+4. Now run main.py by opening cmd and navigating from CMD to your bot folder
+    - In CMD, type: cd yourBotPath
+    - Now type python main.py
+5. It will now create a Config file. Close the bot and fill in your API Key I mentioned on top before.
+6. Now re-run the Bot as you did at Step 4. The Bot should now be working.
+
+I'm not sure if this is the easiest way to get all dependencies etc. Please open up an issue if there is an easier way to make this.
 ## F.A.Q
 - My Account Information is not up to date! Why?
     - This happens due to Intralism updating their Website slower than you made this request.
@@ -48,3 +69,5 @@ This is to organize the code into collections of commands and listeners and hand
 @github/mishka for introducing me into Python and helping me at Data collection from Websites
 
 @github/incetarik for prettifying a lot of the Code.
+
+@github/Mightylordx22 for giving me a head-start into the Project.
