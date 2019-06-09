@@ -8,7 +8,7 @@
 > Shows the current ranking of the user with specified Steam ID / URL.
 - [Global cooldown: 1m] top10, top
 > Displays the current top tier players in Intralism, displayed as an Image in a Table.
-- [User Cooldown 30s] link \<steamID> or \<team URL> or \<custom URL>
+- [User Cooldown 30s] link \<steamID> or \<steam URL> or \<custom URL>
 > Links your Account to the specified Steam ID / URL.
 > If you mistakenly entered another URL / ID, you can redo this process.
 
