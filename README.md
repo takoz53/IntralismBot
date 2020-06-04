@@ -1,4 +1,4 @@
-# Official Discord Bot for Intralism
+# Official (Not anymore!) Discord Bot for Intralism
 
 ## Available Commands
 - [User cooldown: 30s] rank
